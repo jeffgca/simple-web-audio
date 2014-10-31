@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Realtime visualisations</title>
+		<script src="../lib/platform/platform.js"></script>
+		<script src="../lib/three/three.js"></script>
+		<link rel="import" href="../js/x-livecode/element.html">
+		<link rel="stylesheet" href="../css/style.css">
+	</head>
+	<body>
+		<h1>Realtime visualisation</h1>
+		<x-livecode src="main.js" appendcontrols="h1" autoexec hidecode>
+			<!-- Creating this 'dummy' layer here so the script has a place into
+				which inserting the renderer canvas etc and it's not hardcoded
+				to document.body -->
+			<div id="content"></div>
+		</x-livecode>
+		<style>
+			#content { height: 100%; }
+		</style>
+	</body>
+</html>
+

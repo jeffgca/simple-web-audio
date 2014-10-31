@@ -1,0 +1,35 @@
+x-livecode {
+  position: relative;
+}
+
+x-livecode > div > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+x-livecode .editor {
+  transition: opacity 0.5s ease-in;
+}
+
+x-livecode .editor.hidden {
+  opacity: 0.0;
+  pointer-events: none;
+}
+
+x-livecode .editor.hidden * {
+  pointer-events: none;
+}
+
+x-editor .CodeMirror {
+  height: auto;
+  text-shadow: 1px 1px 0px #fff;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+x-editor .CodeMirror-activeline-background {
+  background: rgba(0, 255, 255, 0.2);
+}
+

@@ -1,0 +1,65 @@
+
+
+.CodeMirror {
+	border: 1px solid black;
+	font-size: 1.5rem;
+	transition: box-shadow 0.3s ease-in;
+}
+
+.CodeMirror-linenumber { color: #aaa; margin-left: 3px; }
+.CodeMirror-activeline-background { background: #dff; }
+.CodeMirror-cursor { border-left: 4px solid #222; background: red; width: 3px; }
+.CodeMirror-focused {
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+/* woa talk about specifity */
+div.CodeMirror span.CodeMirror-matchingbracket {
+	color: red;
+	outline: 1px solid #ccc;
+	background: #eee;
+}
+.cm-trailingspace {
+	border-bottom: 3px dotted red;
+	background: #fee;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* so that I can scroll up and down if required */
+html {
+  border-left: 1rem solid #ccc;
+  padding: 0.5rem;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+h1 {
+	font-family: monospace;
+	font-size: 40px;
+}
+
+x-livecode {
+	flex: 1;
+	background: #efefef;
+	display: flex;
+}
+
+x-editor {
+	display: flex;
+	height: 100%;
+}
+
