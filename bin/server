@@ -1,0 +1,10 @@
+var connect = require('connect'),
+    serveStatic = require('serve-static'),
+    dest = './www';
+
+var server = connect();
+var PORT = process.env.PORT || 8000;
+
+server.use(serveStatic(dest)).listen(PORT, function() {
+  console.log(">>> Listening on port ", PORT);
+});
