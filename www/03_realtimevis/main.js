@@ -46,8 +46,11 @@ light.shadowCameraFar = 1000;
 light.shadowDarkness = 0.5;
 scene.add(light);
 
-scene.fog = new THREE.Fog(0xFF0000, 10, 1000);
+// modify these on the fly
+var SKYBOX_COLOR = 0x4D4A77;
+var GROUND_COLOR = 0x38374A;
 
+scene.fog = new THREE.Fog(GROUND_COLOR, 10, 1000);
 
 var planeGeometry = new THREE.PlaneGeometry(5000, 5000, 100, 100);
 var planeMaterial = new THREE.MeshPhongMaterial({ color: 0xcccccc });
@@ -70,7 +73,7 @@ var visualScale = 20;
 
 content.appendChild( renderer.domElement );
 renderer.setSize(contentWidth, contentHeight);
-renderer.setClearColor( 0xff0000, 1.0 );
+renderer.setClearColor( SKYBOX_COLOR, 1.0 );
 
 var camera = new THREE.PerspectiveCamera( 60, contentWidth / contentHeight, 1, 100000 );
 var cameraTarget = new THREE.Vector3( 0, 0, 0 );
